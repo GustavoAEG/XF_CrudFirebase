@@ -8,7 +8,7 @@
             <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
                 <Image Margin="0,0,0,10" HeightRequest="100" Source="firebase.png" ></Image>
 
-                <Label Margin="0,0,0,10" Text="TESTE"
+                <Label Margin="0,0,0,10" Text="Cadastro de Usuário"
                        FontAttributes="Bold" FontSize="Large" TextColor="SeaGreen"
                        HorizontalTextAlignment="Center" ></Label>
 
