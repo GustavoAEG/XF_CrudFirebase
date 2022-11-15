@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_CrudFirebase.MainPage">
+
+    <StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Image Margin="0,0,0,10" HeightRequest="100" Source="firebase.png" ></Image>
+
+                <Label Margin="0,0,0,10" Text="TESTE"
+                       FontAttributes="Bold" FontSize="Large" TextColor="SeaGreen"
+                       HorizontalTextAlignment="Center" ></Label>
+
+                <Entry x:Name="txtId" Placeholder="Id"></Entry>
+                <Entry x:Name="txtNome" Placeholder="Informe o nome"></Entry>
+                <Entry x:Name="txtEmail" Placeholder="Informe o email"></Entry>
+                <Entry x:Name="txtTelefone" Placeholder="Informe seu n° de contato"></Entry>
+                
+
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnIncluir" WidthRequest="200" Text="Incluir" TextColor="White" BackgroundColor="Black" Clicked="BtnIncluir_Clicked"/>
+                    <Button x:Name="btnContatos" WidthRequest="200" Text="Exibir" TextColor="White" BackgroundColor="Black" Clicked="BtnExibir_Clicked"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnAtualizar" WidthRequest="200" Text="Atualizar" TextColor="White"  BackgroundColor="Black"  Clicked="BtnAtualizar_Clicked" />
+                    <Button x:Name="btnDeletar" WidthRequest="200" Text="Deletar" TextColor="White" BackgroundColor="Black" Clicked="BtnDeletar_Clicked" />
+                </StackLayout>
+
+                <CollectionView x:Name="listaContatos" BackgroundColor="AntiqueWhite">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout HeightRequest="50" WidthRequest="200"
+                                 Orientation="Horizontal" Padding="0,5,0,5">
+                                <Label Text="{Binding Nome}" VerticalOptions="Center"/>
+                                <Label Text="{Binding Email}" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
